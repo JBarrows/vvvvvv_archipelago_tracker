@@ -1,0 +1,14 @@
+{
+  "name": "VVVVVV",
+  "game_name": "VVVVVV Archipelago Randomizer",
+  "package_version": "0.0.1",
+  "package_uid": "vvvvvv_ap_tracker_JBarrows",
+  "author": "JBarrows",
+  "variants": {
+    "standard": {
+      "display_name": "Map Tracker",
+      "flags": [
+      ]
+    }
+  }
+}

@@ -1,0 +1,402 @@
+[
+    {
+        "name": "Overworld",
+        "access_rules": ["$levelOpen|0"],
+        "sections": [
+            {
+                "name": "All",
+                "item_count": 1
+            }
+        ],
+        "children": [
+            {
+                "name": "Dimension VVVVVV - 1",
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 270,
+                        "y": 487
+                    }
+                ]
+            },
+            {
+                "name": "Dimension VVVVVV - 2",
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 682,
+                        "y": 410
+                    }
+                ]
+            },
+            {
+                "name": "Dimension VVVVVV - 3",
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 689,
+                        "y": 90
+                    },
+                    {
+                        "map": "fullmap",
+                        "x": 689,
+                        "y": 810
+                    }
+                ]
+            },
+            {
+                "name": "Dimension VVVVVV - 4",
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 360,
+                        "y": 192
+                    }
+                ]
+            },
+            {
+                "name": "Dimension VVVVVV - 5",
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 454,
+                        "y": 666
+                    }
+                ]
+            }
+        ]
+    },
+
+    {
+        "name": "Space Station 1",
+        "access_rules": ["$levelOpen|1"],
+        "sections": [
+            {
+                "name": "Entrance",
+                "item_count": 1
+            }
+        ],
+        "children": [
+            {
+                "name": "Space Station 1 - 1",
+                "sections": [
+                    {
+                        "name": "It's a secret to nobody",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 886,
+                        "y": 270
+                    }
+                ]
+            },
+            {
+                "name": "Space Station 1 - 2",
+                "sections": [
+                    {
+                        "name": "Trench Warfare",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 844,
+                        "y": 344
+                    }
+                ]
+            }
+        ]
+    },
+
+    {
+        "name": "DSS Souleye",
+        "access_rules": ["$levelOpen|2"],
+        "sections": [
+            {
+                "name": "Trophy Room",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 316,
+                "y": 487
+            }
+        ]
+    },
+
+    {
+        "name": "The Laboratory",
+        "access_rules": ["$levelOpen|3"],
+        "sections": [
+            {
+                "name": "Entrance",
+                "item_count": 1
+            }
+        ],
+        "children": [
+            {
+                "name": "The Laboratory - 1",
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 312,
+                        "y": 775
+                    }
+                ]
+            },
+            {
+                "name": "The Laboratory - 2",
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 552,
+                        "y": 775
+                    }
+                ]
+            },
+            {
+                "name": "The Laboratory - 3",
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 503,
+                        "y": 881
+                    },
+                    {
+                        "map": "fullmap",
+                        "x": 503,
+                        "y": 161
+                    }
+                ]
+            }
+        ]
+    },
+    
+    {
+        "name": "The Tower",
+        "access_rules": ["$levelOpen|4"],
+        "sections": [
+            {
+                "name": "Entrance",
+                "item_count": 1
+            }
+        ],
+        "children": [
+            {
+                "name": "The Tower - 1",
+                "sections": [
+                    {
+                        "name": "Tower 1",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 647,
+                        "y": 506
+                    }
+                ]
+            },
+            {
+                "name": "The Tower - 2",
+                "sections": [
+                    {
+                        "name": "Tower 2",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 647,
+                        "y": 740
+                    }
+                ]
+            }
+        ]
+    },
+
+    {
+        "name": "Space Station 2",
+        "access_rules": ["$levelOpen|5"],
+        "sections": [
+            {
+                "name": "Entrance",
+                "item_count": 1
+            }
+        ],
+        "children": [
+            {
+                "name": "Space Station 2 - 1",
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 758,
+                        "y": 560
+                    }
+                ]
+            },
+            {
+                "name": "Space Station 2 - 2",
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 938,
+                        "y": 572
+                    }
+                ]
+            },
+            {
+                "name": "Space Station 2 - 3",
+                "sections": [
+                    {
+                        "name": "",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 874,
+                        "y": 522
+                    }
+                ]
+            },
+            {
+                "name": "Space Station 2 - 4",
+                "sections": [
+                    {
+                        "name": "Doing Things the Hard Way",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 1080,
+                        "y": 628
+                    }
+                ]
+            },
+            {
+                "name": "Space Station 2 - 5",
+                "sections": [
+                    {
+                        "name": "Prize for The Reckless",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 742,
+                        "y": 378
+                    }
+                ]
+            }   
+        ]
+    },
+
+    {
+        "name": "Warp Zone - 1",
+        "access_rules": ["$levelOpen|6"],
+        "sections": [
+            {
+                "name": "Edge Games",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1034,
+                "y": 232
+            }
+        ]
+    },
+
+    {
+        "name": "The Final Level",
+        "access_rules": ["$levelOpen|7"],
+        "sections": [
+            {
+                "name": "V",
+                "item_count": 1
+            }
+        ],
+        "map_locations": [
+            {
+                "map": "fullmap",
+                "x": 1080,
+                "y": 848
+            }
+        ]
+    }
+]

@@ -1,0 +1,50 @@
+﻿{
+  "tracker_default": {
+    "type": "container",
+    "background": "#112",
+    "content": {
+      "type": "dock",
+      "dropshadow": true,
+      "content": [
+        {
+          "type": "dock",
+          "dock": "left",
+          "v_alignment": "stretch",
+          "content": [
+            {
+              "type": "group",
+              "header": "Items",
+              "dock": "top",
+              "content": {
+                "type": "itemgrid",
+                "rows": [
+                  ["trinket1", "trinket2", "trinket3"],
+                  ["trinket4", "trinket5", "trinket6"],
+                  ["trinket7", "trinket8", "trinket9"],
+                  ["trinket10", "trinket11", "trinket12"],
+                  ["trinket13", "trinket14", "trinket15"],
+                  ["trinket16", "trinket17", "trinket18"],
+                  ["trinket19", "trinket20"]
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "tabbed",
+            "tabs": [
+            {
+              "title": "Map",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "fullmap"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
