@@ -17,32 +17,43 @@ function freeDoors()
     return doorCost() <= 0 
 end
 
+function getKeys(index)
+    dc = doorCost()
+    offset = (index * dc)
+    keys = { }
+    for i=1, dc do
+        keys[i] = offset + i
+    end
+    return keys
+
+end
+
 function labUnlocked()
     if freeDoors() then
         return true
     end
-    return trinketsUnlocked({1,2,3})
+    return trinketsUnlocked(getKeys(0))
 end
 
 function towerUnlocked()
     if freeDoors() then
         return true
     end
-    return trinketsUnlocked({4,5,6})
+    return trinketsUnlocked(getKeys(1))
 end
 
 function spaceStationUnlocked()
     if freeDoors() then
         return true
     end
-    return trinketsUnlocked({7,8,9})
+    return trinketsUnlocked(getKeys(2))
 end
 
 function warpZoneUnlocked()
     if freeDoors() then
         return true
     end
-    return trinketsUnlocked({10,11,12})
+    return trinketsUnlocked(getKeys(3))
 end
 
 function trophyRoom()

@@ -123,10 +123,8 @@
     "name": "Door Cost",
     "codes": "doorCost",
     "type": "consumable",
-    "img": "images/trinket.png",
+    "img": "images/lock.png",
     "max_quantity": 3,
-    "initial_quantity": 3,
-    "increment": 3,
-    "decrement": 3
+    "initial_quantity": 3
   }
 ]
