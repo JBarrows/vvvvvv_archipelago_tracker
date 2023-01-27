@@ -9,6 +9,38 @@
         ],
         "children": [
             {
+                "name": "Space Station 1 - 1",
+                "sections": [
+                    {
+                        "name": "It's a Secret to Nobody",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 886,
+                        "y": 270
+                    }
+                ]
+            },
+            {
+                "name": "Space Station 1 - 2",
+                "sections": [
+                    {
+                        "name": "Trench Warfare",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "fullmap",
+                        "x": 844,
+                        "y": 344
+                    }
+                ]
+            },
+            {
                 "name": "Dimension VVVVVV - 1",
                 "sections": [
                     {
@@ -93,68 +125,40 @@
                         "y": 666
                     }
                 ]
-            }
-        ]
-    },
-
-    {
-        "name": "Space Station 1",
-        "sections": [
+            },
             {
-                "name": "Entrance",
-                "item_count": 1
-            }
-        ],
-        "children": [
-            {
-                "name": "Space Station 1 - 1",
+                "name": "DSS Souleye",
+                "access_rules": ["$NPCTrinket"],
                 "sections": [
                     {
-                        "name": "It's a Secret to Nobody",
+                        "name": "NPC Trinket",
                         "item_count": 1
                     }
                 ],
                 "map_locations": [
                     {
                         "map": "fullmap",
-                        "x": 886,
-                        "y": 270
+                        "x": 316,
+                        "y": 487
                     }
                 ]
             },
             {
-                "name": "Space Station 1 - 2",
+                "name": "The Final Level",
+                "access_rules": ["$FinalLevel"],
                 "sections": [
                     {
-                        "name": "Trench Warfare",
+                        "name": "V",
                         "item_count": 1
                     }
                 ],
                 "map_locations": [
                     {
                         "map": "fullmap",
-                        "x": 844,
-                        "y": 344
+                        "x": 1080,
+                        "y": 848
                     }
                 ]
-            }
-        ]
-    },
-
-    {
-        "name": "DSS Souleye",
-        "access_rules": ["$NPCTrinket"],
-        "sections": [
-            {
-                "name": "NPC Trinket",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "fullmap",
-                "x": 316,
-                "y": 487
             }
         ]
     },
@@ -377,24 +381,6 @@
                 "map": "fullmap",
                 "x": 1034,
                 "y": 232
-            }
-        ]
-    },
-
-    {
-        "name": "The Final Level",
-        "access_rules": ["$FinalLevel"],
-        "sections": [
-            {
-                "name": "V",
-                "item_count": 1
-            }
-        ],
-        "map_locations": [
-            {
-                "map": "fullmap",
-                "x": 1080,
-                "y": 848
             }
         ]
     }
