@@ -1,6 +1,6 @@
-function trinketsUnlocked(codes)
+function TrinketsUnlocked(codes)
     for i,v in ipairs(codes) do
-        count = Tracker:ProviderCountForCode("trinket" .. v)
+        local count = Tracker:ProviderCountForCode("trinket" .. v)
         if count < 1 then
             return false
         end
@@ -9,18 +9,18 @@ function trinketsUnlocked(codes)
     return true
 end
 
-function doorCost()
+function DoorCost()
     return Tracker:ProviderCountForCode("doorCost")
 end
 
-function freeDoors()
-    return doorCost() <= 0 
+function FreeDoors()
+    return DoorCost() <= 0 
 end
 
-function getKeys(index)
-    dc = doorCost()
-    offset = (index * dc)
-    keys = { }
+function GetKeys(index)
+    local dc = DoorCost()
+    local offset = (index * dc)
+    local keys = { }
     for i=1, dc do
         keys[i] = offset + i
     end
@@ -28,40 +28,40 @@ function getKeys(index)
 
 end
 
-function labUnlocked()
-    if freeDoors() then
+function LabUnlocked()
+    if FreeDoors() then
         return true
     end
-    return trinketsUnlocked(getKeys(0))
+    return TrinketsUnlocked(GetKeys(0))
 end
 
-function towerUnlocked()
-    if freeDoors() then
+function TowerUnlocked()
+    if FreeDoors() then
         return true
     end
-    return trinketsUnlocked(getKeys(1))
+    return TrinketsUnlocked(GetKeys(1))
 end
 
-function spaceStationUnlocked()
-    if freeDoors() then
+function SpaceStationUnlocked()
+    if FreeDoors() then
         return true
     end
-    return trinketsUnlocked(getKeys(2))
+    return TrinketsUnlocked(GetKeys(2))
 end
 
-function warpZoneUnlocked()
-    if freeDoors() then
+function WarpZoneUnlocked()
+    if FreeDoors() then
         return true
     end
-    return trinketsUnlocked(getKeys(3))
+    return TrinketsUnlocked(GetKeys(3))
 end
 
-function trophyRoom()
-    count = Tracker:ProviderCountForCode("trinket")
+function NPCTrinket()
+    local count = Tracker:ProviderCountForCode("trinket")
     return (count >= 10)
 end
 
-function finalLevel()
-    return (labUnlocked() and towerUnlocked() and 
-            spaceStationUnlocked() and warpZoneUnlocked())
+function FinalLevel()
+    return (LabUnlocked() and TowerUnlocked() and 
+            SpaceStationUnlocked() and WarpZoneUnlocked())
 end

@@ -79,7 +79,7 @@
             },
             {
                 "name": "Dimension VVVVVV - 5",
-                "access_rules": ["$labUnlocked"],
+                "access_rules": ["$LabUnlocked"],
                 "sections": [
                     {
                         "name": "Outside Entanglement Generator",
@@ -110,7 +110,7 @@
                 "name": "Space Station 1 - 1",
                 "sections": [
                     {
-                        "name": "It's a secret to nobody",
+                        "name": "It's a Secret to Nobody",
                         "item_count": 1
                     }
                 ],
@@ -143,10 +143,10 @@
 
     {
         "name": "DSS Souleye",
-        "access_rules": ["$trophyRoom"],
+        "access_rules": ["$NPCTrinket"],
         "sections": [
             {
-                "name": "Trophy Room",
+                "name": "NPC Trinket",
                 "item_count": 1
             }
         ],
@@ -161,7 +161,7 @@
 
     {
         "name": "The Laboratory",
-        "access_rules": ["$labUnlocked"],
+        "access_rules": ["$LabUnlocked"],
         "sections": [
             {
                 "name": "Entrance",
@@ -227,7 +227,7 @@
     
     {
         "name": "The Tower",
-        "access_rules": ["$towerUnlocked"],
+        "access_rules": ["$TowerUnlocked"],
         "sections": [
             {
                 "name": "Entrance",
@@ -272,7 +272,7 @@
 
     {
         "name": "Space Station 2",
-        "access_rules": ["$spaceStationUnlocked"],
+        "access_rules": ["$SpaceStationUnlocked"],
         "sections": [
             {
                 "name": "Entrance",
@@ -348,7 +348,7 @@
                 "name": "Space Station 2 - 5",
                 "sections": [
                     {
-                        "name": "Prize for The Reckless",
+                        "name": "Prize for the Reckless",
                         "item_count": 1
                     }
                 ],
@@ -365,7 +365,7 @@
 
     {
         "name": "Warp Zone",
-        "access_rules": ["$warpZoneUnlocked"],
+        "access_rules": ["$WarpZoneUnlocked"],
         "sections": [
             {
                 "name": "Edge Games",
@@ -383,7 +383,7 @@
 
     {
         "name": "The Final Level",
-        "access_rules": ["$finalLevel"],
+        "access_rules": ["$FinalLevel"],
         "sections": [
             {
                 "name": "V",
