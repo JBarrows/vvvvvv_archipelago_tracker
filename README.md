@@ -1,5 +1,7 @@
 # VVVVVV Archipelago Tracker
-VVVVVV automatic tracker for Archipelago and PopTracker
+PopTracker package for VVVVVV & Archipelago
+
+VVVVVV: https://github.com/TerryCavanagh/VVVVVV
 
 PopTracker: https://github.com/black-sliver/PopTracker
 
