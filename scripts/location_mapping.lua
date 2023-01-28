@@ -1,0 +1,22 @@
+LOCATION_MAPPING = {
+    [2515000] = { "@Overworld/Space Station 1 - 1/It's a Secret to Nobody" },
+    [2515001] = { "@Overworld/Space Station 1 - 2/Trench Warfare" },
+    [2515002] = { "@Space Station 2/Space Station 2 - 1/One Way Room" },
+    [2515003] = { "@Space Station 2/Space Station 2 - 2/You Just Keep Coming Back" },
+    [2515004] = { "@Space Station 2/Space Station 2 - 3/Clarion Call" },
+    [2515005] = { "@Space Station 2/Space Station 2 - 4/Doing Things the Hard Way" },
+    [2515006] = { "@Space Station 2/Space Station 2 - 5/Prize for the Reckless" },
+    [2515007] = { "@The Tower/The Tower - 1/Tower 1" },
+    [2515008] = { "@The Tower/The Tower - 2/Tower 2" },
+    [2515009] = { "@The Laboratory/The Laboratory - 1/It's Worth the Challenge" },
+    [2515010] = { "@The Laboratory/The Laboratory - 2/The Tantalizing Trinket" },
+    [2515011] = { "@The Laboratory/The Laboratory - 3/Purest Unobtanium" },
+    [2515012] = { "@Warp Zone/Edge Games" },
+    [2515013] = { "@Overworld/Dimension VVVVVV - 3/Pipe-Shaped Segment" },
+    [2515014] = { "@Overworld/Dimension VVVVVV - 5/Outside Entanglement Generator" },
+    [2515015] = { "@Overworld/Dimension VVVVVV - 1/Left of Ship" },
+    [2515016] = { "@Overworld/Dimension VVVVVV - 4/Square Room" },
+    [2515017] = { "@Overworld/Dimension VVVVVV - 2/Sad Elephant" },
+    [2515018] = { "@Overworld/DSS Souleye/NPC Trinket" },
+    [2515019] = { "@Overworld/The Final Level/V" }
+}
