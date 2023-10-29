@@ -28,32 +28,36 @@ function GetKeys(index)
 
 end
 
+-- Returns true if the region for a given index is accessible
+function DestinationUnlocked(index)
+    if FreeDoors() then return true end
+
+    -- If areas are shuffled, find out which door leads to the target region (if any)
+    -- Consider: "Door 1" might lead to "Room 3"
+    local doorIndex = DoorIndexForDestination(index)
+    if not doorIndex then return false end -- There may not be a destination assigned to this entrance
+    
+    -- If area costs are shuffled, we need find out which set of keys we're looking for
+    -- Consider: "Key Ring 2" might be needed to unlock "Door 1"
+    local priceIndex = PriceIndexForDoor(doorIndex)
+
+    return TrinketsUnlocked(GetKeys(priceIndex))
+end
+
 function LabUnlocked()
-    if FreeDoors() then
-        return true
-    end
-    return TrinketsUnlocked(GetKeys(0))
+    return DestinationUnlocked(REGION_INDEX_LABORATORY)
 end
 
 function TowerUnlocked()
-    if FreeDoors() then
-        return true
-    end
-    return TrinketsUnlocked(GetKeys(1))
+    return DestinationUnlocked(REGION_INDEX_TOWER)
 end
 
 function SpaceStationUnlocked()
-    if FreeDoors() then
-        return true
-    end
-    return TrinketsUnlocked(GetKeys(2))
+    return DestinationUnlocked(REGION_INDEX_STATION)
 end
 
 function WarpZoneUnlocked()
-    if FreeDoors() then
-        return true
-    end
-    return TrinketsUnlocked(GetKeys(3))
+    return DestinationUnlocked(REGION_INDEX_WARP_ZONE)
 end
 
 function NPCTrinket()
