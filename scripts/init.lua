@@ -12,3 +12,4 @@ Tracker:AddLayouts("layouts/tracker.json")
 -- Tracker:AddLayouts("layouts/settings.json")
 
 ScriptHost:LoadScript("scripts/entrances.lua")
+UpdateDoorCosts("doorCost")
