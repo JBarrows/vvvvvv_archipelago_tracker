@@ -19,6 +19,21 @@
           "content": [
             {
               "type": "group",
+              "header": "Items",
+              "dock": "left",
+              "content": {
+                "type": "itemgrid",
+                "h_alignment": "center",
+                "rows": [
+                  ["trinket1", "trinket2", "trinket3", "trinket4", "trinket5", "trinket6"],
+                  ["trinket7", "trinket8", "trinket9", "trinket10","trinket11","trinket12"],
+                  ["trinket13", "trinket14", "trinket15", "trinket16"],
+                  ["trinket17", "trinket18", "trinket19", "trinket20"]
+                ]
+              }
+            },
+            {
+              "type": "group",
               "header": "Locks",
               "dock": "left",
               "content": {
@@ -28,15 +43,15 @@
             },
             {
               "type": "group",
-              "header": "Items",
+              "header": "Doors",
               "content": {
                 "type": "itemgrid",
                 "h_alignment": "center",
                 "rows": [
-                  ["trinket1", "trinket2", "trinket3", "trinket4", "trinket5", "trinket6"],
-                  ["trinket7", "trinket8", "trinket9", "trinket10","trinket11","trinket12"],
-                  ["trinket13", "trinket14", "trinket15", "trinket16",
-                   "trinket17", "trinket18", "trinket19", "trinket20"]
+                  ["doorLabEntrance", "doorLabExit", "doorLabNote"],
+                  ["doorTowerEntrance", "doorTowerExit", "doorTowerNote"],
+                  ["doorStationEntrance", "doorStationExit", "doorStationNote"],
+                  ["doorWarpEntrance", "doorWarpExit", "doorWarpNote"],
                 ]
               }
             }
