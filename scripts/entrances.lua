@@ -58,7 +58,10 @@ function UpdateDoorCosts(code)
 end
 
 ScriptHost:AddWatchForCode("KeyCostChanged", "doorCost", UpdateDoorCosts)
-ScriptHost:AddWatchForCode("DoorPriceChangedLab", "doorLabEntrance", UpdateDoorCosts)
-ScriptHost:AddWatchForCode("DoorPriceChangedTower", "doorTowerEntrance", UpdateDoorCosts)
-ScriptHost:AddWatchForCode("DoorPriceChangedStation", "doorStationEntrance", UpdateDoorCosts)
-ScriptHost:AddWatchForCode("DoorPriceChangedWarpZone", "doorWarpEntrance", UpdateDoorCosts)
+
+for i = 0, 3 do
+    local doorCode = doorIds[i]
+    if doorCode then 
+        ScriptHost:AddWatchForCode("PriceChanged_"..doorCode, doorCode, UpdateDoorCosts)
+    end
+end
