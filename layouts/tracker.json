@@ -48,10 +48,10 @@
                 "type": "itemgrid",
                 "h_alignment": "center",
                 "rows": [
-                  ["doorLabEntrance", "doorLabExit"],
-                  ["doorTowerEntrance", "doorTowerExit"],
-                  ["doorStationEntrance", "doorStationExit"],
-                  ["doorWarpEntrance", "doorWarpExit"],
+                  ["doorLabEntrance", "doorLabExit", "doorLabNote"],
+                  ["doorTowerEntrance", "doorTowerExit", "doorTowerNote"],
+                  ["doorStationEntrance", "doorStationExit", "doorStationNote"],
+                  ["doorWarpEntrance", "doorWarpExit", "doorWarpNote"],
                 ]
               }
             }

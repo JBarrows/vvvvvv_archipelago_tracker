@@ -164,4 +164,33 @@
         },
       ]
   },
+
+  {
+    "name": "Lab Door Note",
+    "codes": "doorLabNote",
+    "type": "toggle",
+    "img": "images/truth.png",
+    "disabled_img": "images/lies.png",
+  },
+  {
+    "name": "Tower Door Note",
+    "codes": "doorTowerNote",
+    "type": "toggle",
+    "img": "images/truth.png",
+    "disabled_img": "images/lies.png",
+  },
+  {
+    "name": "Station Door Note",
+    "codes": "doorStationNote",
+    "type": "toggle",
+    "img": "images/truth.png",
+    "disabled_img": "images/lies.png",
+  },
+  {
+    "name": "Warp Door Note",
+    "codes": "doorWarpNote",
+    "type": "toggle",
+    "img": "images/truth.png",
+    "disabled_img": "images/lies.png",
+  },
 ]
