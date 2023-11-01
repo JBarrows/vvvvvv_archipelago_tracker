@@ -25,6 +25,11 @@ end
 -- Returns a list of numbers (1-12) that map to required keys for the given price index (0-4)
 -- Ranges will be dependant on DoorCost.
 -- In this case keys are shiny trinkets
+-- index: keys(by cost)
+-- 0: 1, 1-2, 1-3
+-- 1: 2, 3-4, 4-6
+-- 2: 3, 5-6, 7-9
+-- 3: 4, 7-8, 10-12
 function GetKeys(index)
     local dc = DoorCost()
     local offset = (index * dc)
@@ -32,8 +37,8 @@ function GetKeys(index)
     for i=1, dc do
         keys[i] = offset + i
     end
-    return keys
 
+    return keys
 end
 
 -- Returns true if the region for a given index is accessible
