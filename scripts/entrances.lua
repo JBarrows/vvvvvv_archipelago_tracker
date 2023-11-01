@@ -3,6 +3,8 @@ REGION_INDEX_TOWER = 1
 REGION_INDEX_STATION = 2
 REGION_INDEX_WARP_ZONE = 3
 
+Entrances = {}
+
 local doorIds = {
     [0] = "doorLabEntrance",
     [1] = "doorTowerEntrance",
@@ -17,7 +19,7 @@ local exitIds = {
     [3] = "doorWarpExit",
 }
 
-function DoorIndexForDestination(regionIndex)
+function Entrances:DoorIndexForDestination(regionIndex)
     for i, code in pairs(exitIds) do
         local exitItem = Tracker:FindObjectForCode(code)
         if exitItem and exitItem.CurrentStage == regionIndex then
@@ -27,7 +29,7 @@ function DoorIndexForDestination(regionIndex)
     return nil
 end
 
-function PriceIndexForDoor(doorIndex)
+function Entrances:PriceIndexForDoor(doorIndex)
     local doorItem = Tracker:FindObjectForCode(doorIds[doorIndex])
     if doorItem then
         return doorItem.CurrentStage
@@ -36,7 +38,7 @@ function PriceIndexForDoor(doorIndex)
     end
 end
 
-function SetDoorOverlay(code)
+local function SetDoorOverlay(code)
     -- Would be nice to hold a table of the items
     local doorItem = Tracker:FindObjectForCode(code)
     if not doorItem then return end
@@ -51,17 +53,21 @@ function SetDoorOverlay(code)
     end
 end
 
-function UpdateDoorCosts(code)
+function Entrances:UpdateDoorCosts(code)
     for _, doorCode in pairs(doorIds) do
         SetDoorOverlay(doorCode)
     end
 end
 
-ScriptHost:AddWatchForCode("KeyCostChanged", "doorCost", UpdateDoorCosts)
-
-for i = 0, 3 do
-    local doorCode = doorIds[i]
-    if doorCode then 
-        ScriptHost:AddWatchForCode("PriceChanged_"..doorCode, doorCode, UpdateDoorCosts)
+function Entrances:Init()
+    ScriptHost:AddWatchForCode("KeyCostChanged", "doorCost", Entrances.UpdateDoorCosts)
+    
+    for i = 0, 3 do
+        local doorCode = doorIds[i]
+        if doorCode then 
+            ScriptHost:AddWatchForCode("PriceChanged_"..doorCode, doorCode, Entrances.UpdateDoorCosts)
+        end
     end
+
+    Entrances:UpdateDoorCosts("doorCost")
 end

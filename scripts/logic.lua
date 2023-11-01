@@ -42,12 +42,12 @@ function DestinationUnlocked(index)
 
     -- If areas are shuffled, find out which door leads to the target region (if any)
     -- Consider: "Door 1" might lead to "Room 3"
-    local doorIndex = DoorIndexForDestination(index)
+    local doorIndex = Entrances:DoorIndexForDestination(index)
     if not doorIndex then return false end -- There may not be a destination assigned to this entrance
     
     -- If area costs are shuffled, we need find out which set of keys we're looking for
     -- Consider: "Key Ring 2" might be needed to unlock "Door 1"
-    local priceIndex = PriceIndexForDoor(doorIndex)
+    local priceIndex = Entrances:PriceIndexForDoor(doorIndex)
 
     return TrinketsUnlocked(GetKeys(priceIndex))
 end
