@@ -1,9 +1,10 @@
 {
-  "name": "VVVVVV",
+  "name": "VVVVVV Archipelago",
   "game_name": "VVVVVV",
-  "package_version": "0.0.5",
-  "package_uid": "vvvvvv_ap_tracker_JBarrows",
+  "package_version": "0.1.0",
+  "package_uid": "vvvvvv_ap_JBarrows",
   "author": "JBarrows",
+  "min_poptracker_version": "0.25.3",
   "variants": {
     "standard": {
       "display_name": "Map Tracker",
