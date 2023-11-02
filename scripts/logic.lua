@@ -76,8 +76,7 @@ end
 -- Check whether the NPC trinket might be available
 -- NOTE: This also requires one of two crew members to be rescued
 function NPCTrinket()
-    local count = Tracker:ProviderCountForCode("trinket")
-    return (count >= 10)
+    return LabUnlocked() or (TowerUnlocked() and SpaceStationUnlocked() and WarpZoneUnlocked())
 end
 
 -- One check in the final level is only available when all areas are complete
