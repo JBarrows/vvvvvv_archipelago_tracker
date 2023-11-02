@@ -25,6 +25,11 @@ end
 -- Returns a list of numbers (1-12) that map to required keys for the given price index (0-4)
 -- Ranges will be dependant on DoorCost.
 -- In this case keys are shiny trinkets
+-- index: keys(by cost)
+-- 0: 1, 1-2, 1-3
+-- 1: 2, 3-4, 4-6
+-- 2: 3, 5-6, 7-9
+-- 3: 4, 7-8, 10-12
 function GetKeys(index)
     local dc = DoorCost()
     local offset = (index * dc)
@@ -32,8 +37,8 @@ function GetKeys(index)
     for i=1, dc do
         keys[i] = offset + i
     end
-    return keys
 
+    return keys
 end
 
 -- Returns true if the region for a given index is accessible
@@ -42,12 +47,12 @@ function DestinationUnlocked(index)
 
     -- If areas are shuffled, find out which door leads to the target region (if any)
     -- Consider: "Door 1" might lead to "Room 3"
-    local doorIndex = DoorIndexForDestination(index)
+    local doorIndex = Entrances:DoorIndexForDestination(index)
     if not doorIndex then return false end -- There may not be a destination assigned to this entrance
     
     -- If area costs are shuffled, we need find out which set of keys we're looking for
     -- Consider: "Key Ring 2" might be needed to unlock "Door 1"
-    local priceIndex = PriceIndexForDoor(doorIndex)
+    local priceIndex = Entrances:PriceIndexForDoor(doorIndex)
 
     return TrinketsUnlocked(GetKeys(priceIndex))
 end
@@ -71,8 +76,7 @@ end
 -- Check whether the NPC trinket might be available
 -- NOTE: This also requires one of two crew members to be rescued
 function NPCTrinket()
-    local count = Tracker:ProviderCountForCode("trinket")
-    return (count >= 10)
+    return LabUnlocked() or (TowerUnlocked() and SpaceStationUnlocked() and WarpZoneUnlocked())
 end
 
 -- One check in the final level is only available when all areas are complete
