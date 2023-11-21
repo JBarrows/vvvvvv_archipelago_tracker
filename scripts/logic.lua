@@ -22,7 +22,7 @@ function FreeDoors()
     return DoorCost() <= 0
 end
 
--- Returns a list of numbers (1-12) that map to required keys for the given price index (0-4)
+-- Returns a list of numbers (1-12) that map to required keys for the given price index (0-3)
 -- Ranges will be dependant on DoorCost.
 -- In this case keys are shiny trinkets
 -- index: keys(by cost)
@@ -42,45 +42,28 @@ function GetKeys(index)
 end
 
 -- Returns true if the region for a given index is accessible
-function DestinationUnlocked(index)
-    if FreeDoors() then return true end
+function DestinationUnlocked(...)
+    if FreeDoors() or select("#",...) == 0 then return true end
 
-    -- If areas are shuffled, find out which door leads to the target region (if any)
-    -- Consider: "Door 1" might lead to "Room 3"
-    local doorIndex = Entrances:DoorIndexForDestination(index)
-    if not doorIndex then return false end -- There may not be a destination assigned to this entrance
-    
-    -- If area costs are shuffled, we need find out which set of keys we're looking for
-    -- Consider: "Key Ring 2" might be needed to unlock "Door 1"
-    local priceIndex = Entrances:PriceIndexForDoor(doorIndex)
+    for _, index in ipairs({...}) do
+        local destIdx = tonumber(index)
 
-    return TrinketsUnlocked(GetKeys(priceIndex))
-end
+        -- If areas are shuffled, find out which door leads to the target region (if any)
+        -- Consider: "Door 1" might lead to "Room 3"
+        local doorIndex = Entrances:DoorIndexForDestination(destIdx)
+        if not doorIndex then return false end -- There may not be a destination assigned to this entrance
 
-function LabUnlocked()
-    return DestinationUnlocked(REGION_INDEX_LABORATORY)
-end
+        -- If area costs are shuffled, we need find out which set of keys we're looking for
+        -- Consider: "Key Ring 2" might be needed to unlock "Door 1"
+        local priceIndex = Entrances:PriceIndexForDoor(doorIndex)
 
-function TowerUnlocked()
-    return DestinationUnlocked(REGION_INDEX_TOWER)
-end
+        -- Finally, we check if we have each every key in the price
+        -- The metaphor is a bit stretched, but let's say that "Key Ring 2" needs keys 7, 8, AND 9 to unlock the door
+        local keysUnlocked = TrinketsUnlocked(GetKeys(priceIndex))
+        if not keysUnlocked then
+            return false -- EXIT: Return immediately if even one key isn't collected
+        end
+    end
 
-function SpaceStationUnlocked()
-    return DestinationUnlocked(REGION_INDEX_STATION)
-end
-
-function WarpZoneUnlocked()
-    return DestinationUnlocked(REGION_INDEX_WARP_ZONE)
-end
-
--- Check whether the NPC trinket might be available
--- NOTE: This also requires one of two crew members to be rescued
-function NPCTrinket()
-    return LabUnlocked() or (TowerUnlocked() and SpaceStationUnlocked() and WarpZoneUnlocked())
-end
-
--- One check in the final level is only available when all areas are complete
-function FinalLevel()
-    return (LabUnlocked() and TowerUnlocked() and
-            SpaceStationUnlocked() and WarpZoneUnlocked())
+    return true
 end
