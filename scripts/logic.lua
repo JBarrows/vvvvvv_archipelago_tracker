@@ -1,7 +1,7 @@
 -- returns true if the key items mapped from the given list of numbers are all unlocked
 -- eg. if codes = [1,2] then returns true if trinket 1 and trinket 2 are unlocked/active
-function TrinketsUnlocked(codes)
-    for _,v in ipairs(codes) do
+function TrinketsUnlocked(...)
+    for _,v in ipairs({...}) do
         local count = Tracker:ProviderCountForCode("trinket" .. v)
         if count < 1 then
             return false
@@ -38,7 +38,7 @@ function GetKeys(index)
         keys[i] = offset + i
     end
 
-    return keys
+    return table.unpack(keys) -- This feels kind of wrong, but I'm trying multiple return values
 end
 
 -- Returns true if the region for a given index is accessible
