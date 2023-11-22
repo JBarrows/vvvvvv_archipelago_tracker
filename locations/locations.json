@@ -111,7 +111,7 @@
             },
             {
                 "name": "Dimension VVVVVV - 5",
-                "access_rules": ["$DestinationUnlocked|0"],
+                "access_rules": ["@The Laboratory"],
                 "sections": [
                     {
                         "name": "Outside Entanglement Generator",
@@ -129,8 +129,8 @@
             {
                 "name": "DSS Souleye",
                 "access_rules": [
-                    "$DestinationUnlocked|0",
-                    "$DestinationUnlocked|1|2|3"
+                    "@The Laboratory",
+                    "@The Tower,@Space Station 2,@Warp Zone"
                 ],
                 "sections": [
                     {
@@ -148,7 +148,7 @@
             },
             {
                 "name": "The Final Level",
-                "access_rules": ["$DestinationUnlocked|0|1|2|3"],
+                "access_rules": ["@The Laboratory,@The Tower,@Space Station 2,@Warp Zone"],
                 "sections": [
                     {
                         "name": "V",
