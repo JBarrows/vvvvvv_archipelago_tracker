@@ -65,7 +65,7 @@ end
 
 function Entrances:Init()
     ScriptHost:AddWatchForCode("KeyCostChanged", "doorCost", Entrances.UpdateDoorCosts)
-    
+
     for i = 0, 3 do
         local doorCode = doorIds[i]
         if doorCode then 
