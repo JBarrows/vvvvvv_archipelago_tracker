@@ -26,6 +26,9 @@ function Entrances:DoorIndexForDestination(regionIndex)
             return i
         end
     end
+    if Verbose then
+        print("Entrances:DoorIndexForDestination(): Failed to find door to region "..regionIndex)
+    end
     return nil
 end
 
@@ -33,9 +36,10 @@ function Entrances:PriceIndexForDoor(doorIndex)
     local doorItem = Tracker:FindObjectForCode(doorIds[doorIndex])
     if doorItem then
         return doorItem.CurrentStage
-    else
-        return nil
+    elseif Verbose then
+        print("Entrances:PriceIndexForDoor(): Failed to find price for door "..doorIndex)
     end
+    return nil
 end
 
 local function SetDoorOverlay(code)

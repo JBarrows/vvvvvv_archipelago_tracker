@@ -1,3 +1,5 @@
+Verbose = false
+
 ScriptHost:LoadScript("scripts/logic.lua")
 ScriptHost:LoadScript("scripts/archipelago.lua")
 
