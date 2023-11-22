@@ -22,6 +22,14 @@ function FreeDoors()
     return DoorCost() <= 0
 end
 
+-- returns multiple values n, n+1,...,n+(i-1)
+-- Uses recursive tail calls (I hope)
+local function incrementList(n, i, ...)
+    if (i < 1) then return ... end
+    -- prepend n and go deeper
+    return n, incrementList(n+1, i-1, ...)
+end
+
 -- Returns a list of numbers (1-12) that map to required keys for the given price index (0-3)
 -- Ranges will be dependant on DoorCost.
 -- In this case keys are shiny trinkets
@@ -32,13 +40,8 @@ end
 -- 3: 4, 7-8, 10-12
 function GetKeys(index)
     local dc = DoorCost()
-    local offset = (index * dc)
-    local keys = { }
-    for i=1, dc do
-        keys[i] = offset + i
-    end
-
-    return table.unpack(keys) -- This feels kind of wrong, but I'm trying multiple return values
+    local offset = (index * dc) + 1
+    return incrementList(offset, dc)
 end
 
 -- Returns true if the region for a given index is accessible
